@@ -1,0 +1,18 @@
+[
+  {
+    "product":"test1",
+    "price":"500",
+    "Brand":"Samsung",
+    "Category":"Electronics"
+  },{
+    "product":"test2",
+    "price":"2000",
+    "Brand":"LG",
+    "Category":"Electronics"
+  },{
+    "product":"test3",
+    "price":"1000",
+    "Brand":"LG",
+    "Category":"Electronics"
+  }
+]

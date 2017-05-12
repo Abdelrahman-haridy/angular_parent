@@ -1,0 +1,382 @@
+/******************************************************************************
+* by Abdelrahman Haridy 
+* Email    : abdelrahman.haridy01@gmail.com
+* LinkedIn : http://linkedin.com/pub/abdelrahman-haridy/60/9a3/531/
+* Phone    : 002 01020875298, 002 01020875298
+* website  : http://abharwork.com
+******************************************************************************/
+
+/* colors 
+------------------------------*/
+$mainColor : #37424a;
+$secColor : #1cadce;
+
+/* fonts 
+------------------------------*/
+$mainFont : 'Oswald', sans-serif;
+
+
+/* FrameWork 
+------------------------------*/
+body {
+    font-family: $mainFont;
+    background-color: #edeff0;
+}
+::-moz-selection{ 
+    background: $mainColor;
+    color:#fff !important; 
+}
+::selection{ 
+    background: $mainColor; 
+    color:#fff; 
+}
+::-webkit-selection{ 
+    background: $mainColor; 
+    color:#fff; 
+}
+a {
+    color: $mainColor;
+    transition: 0.3s;
+    text-decoration: none;
+}
+a:focus, a:hover {
+    color: $secColor;
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $secColor;
+}
+.clearfix {
+    clear: both;
+}
+.main_container {
+    margin-top: 50px;
+}
+.container {
+    width: 530px;
+    margin: 0 auto;
+}
+.header_title {
+    text-align: center;
+    margin-top: 20px;
+    h1 {
+        color: $mainColor;
+        text-transform: capitalize;
+        display: inline-block;
+        padding: 0 8px;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        background: #edeff0;
+         font-size: 24px;
+    }
+    .line {
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.15);
+        margin-top: -32px;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Top Menu
+------------------------------*/
+.top_menu {
+    position: absolute;
+    width: 100%;
+    z-index: 99999;
+    background-color: #fff;
+    box-shadow: 0 4px 8px -1px #eee;
+    top: 0;
+    .left_side {
+        position: absolute;
+        z-index: 12;
+        left: 0px;
+        top: 0px;
+        width: 50px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        .profile_img img {
+            width: calc(100% - 14px );
+            border-radius: 50%;
+            padding: 7px;
+        }
+    }
+    .logo {
+        background-image: url(../img/logo.png);
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6px;
+        width: 173px;
+        height: 42px;
+        z-index: 12;
+        position: relative;
+        display: block;
+    }
+    .right_side img {
+        position: absolute;
+        z-index: 12;
+        top: 0px;
+        width: 20px;
+        height: auto;
+        line-height: 60px;
+        text-align: center;
+        padding: 10px;
+        margin-right: 10px;
+        transition: .5s;
+    }
+    .right_side .alerts {
+        right: 52px;
+    }
+    .right_side .chat {
+        right: 0px;
+    }
+}
+
+/* sidebar
+------------------------------*/
+.sidebar {
+    width: 42px;
+    background-color: $mainColor;
+    position: absolute;
+    height: 100%;
+    z-index: 5;
+    &:before {
+        background-color: $mainColor;
+        content: "";
+        display: block;
+        position: fixed;
+        width: 42px;
+        bottom: 0;
+        top: 0;
+        z-index: 0;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        z-index: 2;
+        position: relative;
+        li.active {
+            background-color: #2c353b;
+        }
+        a {
+            width: 100%;
+            height: 42px;
+            display: block;
+            text-align: center;
+            line-height: 52px;
+            position: relative;
+            &:hover {
+                background-color: #2c353b;
+            }
+            img {
+                position: absolute;
+                left: 13px;
+                top: 10px;
+            }
+            span {
+                display: none;
+                color: #fff;
+                position: absolute;
+                left: 30px;
+                top: 0;
+                width: 158px;
+                height: 38px;
+                line-height: 38px;
+                z-index: 121;
+                box-shadow: 2px 0 6px rgba(50, 50, 50, 0.2);
+            }
+        }
+    }
+    .sidebar_collapse {
+        width: 42px;
+        height: 42px;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        position: fixed;
+        bottom: 0;
+        span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 20px;
+            background: #ffffff;
+            border-radius: 3px;
+            opacity: 1;
+            left: 11px;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+        }
+        span:nth-child(1) {
+          top: 5px;
+        }
+        span:nth-child(2) {
+          top: 14px;
+        }
+        span:nth-child(3) {
+          top: 23px;
+        }
+    }
+    #sidebar_collapse_close {
+        display: none;
+        span:nth-child(1) {
+          top: 18px;
+          -webkit-transform: rotate(135deg);
+          -moz-transform: rotate(135deg);
+          -o-transform: rotate(135deg);
+          transform: rotate(135deg);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+          left: -60px;
+        }
+
+        span:nth-child(3) {
+          top: 18px;
+          -webkit-transform: rotate(-135deg);
+          -moz-transform: rotate(-135deg);
+          -o-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+        } 
+    }
+}
+.sidebar.open:before {
+    width: 200px;
+}
+
+
+/* main content
+------------------------------*/
+.main_content {
+    margin-left: 42px;
+    padding: 10px 20px 20px;
+    background-color: #edeff0;
+}
+
+
+.products {
+    a {
+        width: calc(33.33% - 20px);
+        float: left;
+        margin-bottom: 30px;
+        margin: 20px 10px 20px;
+        .product_img {
+            background-color: #7e3e93;
+            width: 100%;
+            height: 125px;
+            overflow: hidden;
+            margin: 0 auto;
+            line-height: 125px;
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+            img {
+                width: 100%;
+                min-height: 100%;
+                margin: 0 auto;
+            }
+        }
+        h4 {
+            color: $mainColor;
+            text-transform: uppercase;
+            display: inline;
+            padding: 10px;
+        }
+        span {
+            float: right;
+            padding: 0 10px;
+        }
+    }
+}
+
+
+
+
+/* single_product
+------------------------------*/
+.single_product {
+    h1 {
+        text-transform: capitalize;
+    }
+    .product_img {
+        width: calc(50% - 20px);
+        float: left;
+        overflow: hidden;
+        margin: 10px;
+        img {
+            width: 100%;
+        }
+        
+    }
+    .info {
+        width: calc(50% - 20px);
+        float: left;
+        margin: 10px;
+        span {
+            font-weight: bold;
+            color: $secColor;
+        }
+    }
+}
+
+/* Responsive Styles
+------------------------------*/
+/* Extra Small Devices, Phones */
+@media (max-width: 767px) {
+    .container {
+        width: 205px;
+    }
+    .top_menu .logo {
+        width: 45px;
+    }
+    .top_menu .right_side img {
+        width: 14px;
+        padding: 16px 5px;
+        margin-right: 5px;
+    }
+    .top_menu .right_side .alerts {
+        right: 30px;
+    }
+    .products a {
+        width: 100%;
+    }
+    .single_product .product_img, .single_product .info {
+        width: 100%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+
+/* Medium Devices, Desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+
+
+
+

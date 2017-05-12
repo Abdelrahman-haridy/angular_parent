@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="single_product">
+        <h1>{{products[productSingle].product}}</h1>
+        <div class="product_img">
+            <img ng-src="img/{{products[productSingle].img}}.jpg" alt="{{products[productSingle].product}}" />
+        </div>
+        <div class="info">
+            <p class="price"><span>Price:</span> {{products[productSingle].price}}$</p>
+            <p class="brand"><span>Brand:</span> {{products[productSingle].Brand}}</p>
+            <p class="category"><span>Category:</span> {{products[productSingle].Category}}</p>
+            <a ng-click="home()">back to home</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

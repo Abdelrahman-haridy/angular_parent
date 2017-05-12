@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="Products">
+    <head>
+        <meta charset="utf-8">
+        <title>Perant</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/normalize.min.css" rel="stylesheet">
+        <link href="css/hover-min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Top Menu -->
+        <div class="top_menu">
+            <div class="left_side">
+                <div class="profile_img">
+                    <img src="img/profile.jpg" alt="profile img" />
+                </div>
+            </div>
+            <a class="logo" href="#"> </a>
+            <div class="right_side">
+                <a href="#/"><img class="alerts hvr-wobble-vertical" src="img/icon-alert.png" alt="alert" /></a>
+                <a href="#/"><img class="chat hvr-wobble-vertical" src="img/icon-chat.png" alt="chat" /></a>
+            </div>
+        </div>
+        <!-- // Top Menu -->
+        
+        <div class="main_container">
+            <!-- sidebar -->
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#/"><img src="img/icon-options.png"/><span> page name</span></a></li>
+                    <li><a href="#/"><img src="img/icon-options.png"/><span> page name</span></a></li>
+                    <li><a href="#/"><img src="img/icon-options.png"/><span> page name</span></a></li>
+                    <li><a href="#/"><img src="img/icon-options.png"/><span> page name</span></a></li>
+                    <li class="active"><a href="#/"><img src="img/icon-options.png"/><span> page name</span></a></li>
+                    <li><a href="#/"><img src="img/icon-options.png"/><span> page name</span></a></li>
+                </ul>
+                <div class="sidebar_collapse" id="sidebar_collapse_close">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="sidebar_collapse" id="sidebar_collapse_open">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+            </div>
+            <!-- // sidebar -->
+            <!-- main_content -->
+            <div class="main_content">
+                <div ng-view=""></div>
+            </div>
+            <!-- // main_content -->
+        </div>
+        
+
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script src="js/controller.js"></script>
+    </body>
+</html>
